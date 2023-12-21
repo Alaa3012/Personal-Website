@@ -95,9 +95,15 @@
     background-color: var(--secondary-color);
 
     svg{
-        width: 70%;
-        height: 70%;
+        width: 60%;
+        height: 60%;
         color : var(--white-color);
+        cursor: pointer;
+        transition : all 0.3s ease-in-out;
+        &:hover{
+            width: 75%;
+            height: 75%;
+        }
     }
 
     div {
@@ -109,7 +115,7 @@
 
         padding: 1rem;
 
-        width : 80%; 
+        width : 60%; 
         height: 100vh;
 
         display: flex;
@@ -129,6 +135,12 @@
             height: 35px;
             color : var(--secondary-color);
             margin: 0.5rem 1rem;
+            cursor: pointer;
+            &:hover{
+                color: var(--gray-color);
+                width : 35px;
+                height: 35px;
+            }
         }
 
         ul {
