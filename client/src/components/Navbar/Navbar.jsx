@@ -21,7 +21,6 @@ function Navbar() {
 
         {navbarItems.map((item)=>(
           <li className="app__flex p-text" key ={item.link}>
-            <div/>
             <a href ={item.path}>{item.display}</a>
           </li>
         ))}
