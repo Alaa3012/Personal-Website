@@ -39,7 +39,9 @@
     align-items: center;
 
     list-style: none;
+li {
 
+}
     li {
         margin: 0 1rem;
         cursor: pointer;
@@ -139,7 +141,6 @@
             justify-content: flex-start;
             align-items: flex-start;
             flex-direction: column;
-
             li {
                 margin: 1rem;
     
@@ -148,13 +149,6 @@
                     text-decoration: none;
                     font-size: 1rem;
                     font-weight: 500;
-    
-                    transition : all 0.3s ease-in-out;
-    
-                    &:hover{
-                        color: var(--secondary-color);
-                        font-size: 25px;
-                    }
                 }
             }
     

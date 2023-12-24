@@ -27,17 +27,19 @@ function Header(){
   return (
   
   <div className="app__header app__flex">
-    <motion.div
-      whileInView= { (viewed) ? {scale: 1, x:0} : inViewVariants}
-      whileHover={ { scale: 1.2}}
-      onHoverStart={e => {setviewed(true);}}
-      onHoverEnd={e => {}}
-      whileTap={{ scale: 0.8 }}
-      style = {{cursor: 'pointer'}}
-      transition={{type: "spring", damping : 7}}
+    <div
       className="app__header-info"
     >
-      <div className="app__header-badge">
+      <motion.div 
+        whileInView= { (viewed) ? {scale: 1, x:0} : inViewVariants}
+        whileHover={ { scale: 1.2}}
+        onHoverStart={e => {setviewed(true);}}
+        onHoverEnd={e => {}}
+        whileTap={{ scale: 0.8 }}
+        style = {{cursor: 'pointer'}}
+        transition={{type: "spring", damping : 7}}
+        className="app__header-badge"
+      >
         <div className="badge-cmp app__flex">
           <span>👋</span>
           <div style={{ marginLeft: 20 }}>
@@ -45,14 +47,25 @@ function Header(){
             <h1 className="head-text">Alaa</h1>
           </div>
         </div>
+      </motion.div>
 
+      <motion.div 
+        whileInView= { (viewed) ? {scale: 1, x:0} : inViewVariants}
+        whileHover={ { scale: 1.2}}
+        onHoverStart={e => {setviewed(true);}}
+        onHoverEnd={e => {}}
+        whileTap={{ scale: 0.8 }}
+        style = {{cursor: 'pointer'}}
+        transition={{type: "spring", damping : 7}}
+        className="app__header-badge"
+      >
         <div className="tag-cmp app__flex">
           <p className="p-text">Web Developer</p> 
           <p className="p-text">Blockchain Engineer</p>
         </div>
-      </div>
+      </motion.div>
     
-    </motion.div>
+    </div>
 
     <motion.div
       whileInView={{ opacity: [0, 1] }}
@@ -77,9 +90,17 @@ function Header(){
       style = {{cursor: 'pointer'}}
     >
       {[images.node, images.redux, images.graphql].map((circle, index) => (
-        <div className="circle-cmp app__flex" key={`circle-${index}`}>
+        <motion.div 
+          whileInView= { (viewed) ? {scale: 1, x:0} : inViewVariants}
+          whileHover={ { scale: 1.2}}
+          onHoverStart={e => {setviewed(true);}}
+          onHoverEnd={e => {}}
+          whileTap={{ scale: 0.8 }}
+          style = {{cursor: 'pointer'}}
+          transition={{type: "spring", damping : 7}}
+          className="circle-cmp app__flex" key={`circle-${index}`}>
           <img src={circle} alt="profile_bg" />
-        </div>
+        </motion.div>
       ))}
     </motion.div>
   </div>

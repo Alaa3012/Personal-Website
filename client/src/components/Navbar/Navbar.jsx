@@ -18,12 +18,15 @@ function Navbar() {
       </div>
 
       <ul className='app__navbar-links'>
-
-        {navbarItems.map((item)=>(
-          <li className="app__flex p-text" key ={item.link}>
-            <a href ={item.path}>{item.display}</a>
-          </li>
-        ))}
+          {navbarItems.map((item)=>(
+            <motion.li
+             whileHover={{scale:  1.3}}
+             transition={{type :"spring", damping:7}}
+             className="app__flex p-text" key ={item.link}
+            >
+              <a href ={item.path}>{item.display}</a>
+            </motion.li>
+          ))}
 
       </ul>
 
